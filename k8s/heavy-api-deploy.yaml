@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: heavy-deploy
+  labels:
+    app: heavy-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: heavy-api
+  template:
+    metadata:
+      labels:
+        app: heavy-api
+    spec:
+      containers:
+      - name: api-pod
+        image: claudiuri/heavy-api
+        resources:
+          requests:
+            cpu: 200m
+            memory: 256M
+          limits:
+            cpu: 300m
+            memory: 512M
+        env:
+        - name: PORT
+          value: '8086'
+        ports:
+        - containerPort: 8086
+          name: api-port
