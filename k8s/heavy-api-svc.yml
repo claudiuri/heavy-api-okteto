@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+      dev.okteto.com/generate-host: "true"
+  name: heavy-api
+  labels:
+    app: heavy-api
+spec:
+  type: LoadBalencer
+  selector:
+    app: heavy-api
+  ports:
+  - protocol: TCP
+    port: 8086
+    name: svc-port
+    targetPort: api-port
