@@ -19,7 +19,7 @@ spec:
         image: registry.cloud.okteto.net/claudiuri/heavy-api-okteto:latest
         resources:
           requests:
-            cpu: 300m
+            cpu: 500m
             memory: 512M
         env:
         - name: PORT
