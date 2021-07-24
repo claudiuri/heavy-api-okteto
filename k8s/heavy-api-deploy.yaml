@@ -21,9 +21,6 @@ spec:
           requests:
             cpu: 200m
             memory: 256M
-          limits:
-            cpu: 300m
-            memory: 512M
         env:
         - name: PORT
           value: '8086'
