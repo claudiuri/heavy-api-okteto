@@ -20,7 +20,7 @@ spec:
         resources:
           requests:
             cpu: 200m
-            memory: 256M
+            memory: 512M
         env:
         - name: PORT
           value: '8086'
