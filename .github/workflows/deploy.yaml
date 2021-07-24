@@ -24,7 +24,7 @@ jobs:
       uses: okteto/apply@master
       with:
         namespace: claudiuri
-        manifest: ./k8s/heavy-api-deploy.yaml
+        manifest: ./k8s
 
     - name: "Push changes"
       uses: okteto/push@master
