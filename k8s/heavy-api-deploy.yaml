@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: api-pod
-        image: registry.cloud.okteto.net/claudiuri/heavy-api:latest
+        image: registry.cloud.okteto.net/claudiuri/heavy-api-okteto:latest
         resources:
           requests:
             cpu: 200m
